@@ -1,0 +1,38 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:columnCount="4"
+    android:orientation="horizontal">
+
+    <EditText android:layout_columnSpan="3" android:layout_gravity="fill"
+        tools:ignore="LabelFor" />
+    <Button android:layout_column="3" android:text="@string/divide" />
+    <Button android:text="@string/_1" />
+    <Button android:text="@string/_2" />
+    <Button android:text="@string/_3" />
+    <Button android:text="@string/multiply" />
+    <Button android:text="@string/_4" />
+    <Button android:text="@string/_5" />
+    <Button android:text="@string/_6" />
+    <Button android:text="@string/subtract" />
+    <Button android:text="@string/_7" />
+    <Button android:text="@string/_8" />
+    <Button android:text="@string/_9" />
+    <Button
+        android:layout_gravity="fill"
+        android:layout_rowSpan="3"
+        android:text="@string/plus" />
+    <Button
+        android:layout_gravity="fill"
+        android:layout_columnSpan="2"
+        android:text="@string/_0" />
+    <Button android:text="@string/_00" />
+    <Button
+        android:layout_gravity="fill"
+        android:layout_columnSpan="3"
+        android:text="@string/equal" />
+
+</GridLayout>
