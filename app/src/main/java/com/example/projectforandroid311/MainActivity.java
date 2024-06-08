@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
     private Button enterAccountButton;
     private Button saveEmailAndPasswordButton;
 
+    private Button enterExampleRadioButton;
+    private Button enterExampleToggleButton;
+
+    private Button enterExampleProgressBar;
+
+
     private String userEmailTextForSave;
     private String userPasswordTextForSave;
 
@@ -30,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         userPasswordEditText = findViewById(R.id.password_edit_text_id);
         enterAccountButton = findViewById(R.id.enter_account_button_id);
         saveEmailAndPasswordButton = findViewById(R.id.save_account_button_id);
+        enterExampleRadioButton = findViewById(R.id.enter_example_radio_button_id);
+        enterExampleToggleButton = findViewById(R.id.enter_example_toggle_button);
+        enterExampleProgressBar = findViewById(R.id.enter_example_for_progress_bar_id);
+
     }
 
     @Override
@@ -57,6 +67,22 @@ public class MainActivity extends AppCompatActivity {
             userEmailTextForSave = userEmailEditText.getText().toString();
             userPasswordTextForSave = userPasswordEditText.getText().toString();
 
+        });
+
+        enterExampleRadioButton.setOnClickListener((view) ->
+        {
+            Intent intent = new Intent(MainActivity.this, ExampleForRadioButton.class);
+            startActivity(intent);
+        });
+
+        enterExampleToggleButton.setOnClickListener((view) ->{
+            Intent secondIntent = new Intent(MainActivity.this, ExampleForToggleButton.class);
+            startActivity(secondIntent);
+        });
+
+        enterExampleProgressBar.setOnClickListener((view) ->{
+            Intent secondIntent = new Intent(MainActivity.this, ExampleForProgressBar.class);
+            startActivity(secondIntent);
         });
 
         enterAccountButton.setOnClickListener((view) ->{

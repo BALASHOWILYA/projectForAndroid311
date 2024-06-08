@@ -25,4 +25,8 @@
     <string name="account_name">account name</string>
     <string name="go_back_to_registration">go back to registration</string>
     <string name="floating_text_view">FLOATING TEXT VIEW</string>
+    <string name="toggle_button">Toggle Button</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+    <string name="start_progress">Start Progress</string>
 </resources>

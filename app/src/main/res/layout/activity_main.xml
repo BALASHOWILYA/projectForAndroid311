@@ -29,4 +29,44 @@
         android:textStyle="bold"
         />
 
+    <Button
+        android:id="@+id/enter_example_radio_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="enter_example_radio_button_id"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/link_text_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://rickandmortyapi.com"
+        android:linksClickable="true"
+        android:autoLink="web"
+        android:layout_margin="16dp"
+        android:textIsSelectable="true"
+
+        />
+
+    <Button
+        android:id="@+id/enter_example_toggle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="enter_example_toggle_button"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/enter_example_for_progress_bar_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="enter_example_for_progress_bar"
+        android:textStyle="bold"
+        />
+
+
 </LinearLayout>
