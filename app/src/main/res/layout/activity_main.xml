@@ -68,5 +68,35 @@
         android:textStyle="bold"
         />
 
+    <Button
+        android:id="@+id/enter_example_thread_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_example_thread" />
+    <Button
+        android:id="@+id/enter_priority_thread_example_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_example_thread" />
+
+    <Button
+        android:id="@+id/enter_methodsWaitingNotifies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enter_methodsWaitingNotifies" />
+
+    <Button
+        android:id="@+id/enter_example_asyncTask_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enter_example_asyncTask_id"/>
+
+
+    <Button
+        android:id="@+id/enter_example_handler_thread_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enter_example_handler_thread"/>
+
 
 </LinearLayout>

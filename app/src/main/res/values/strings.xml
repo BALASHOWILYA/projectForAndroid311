@@ -29,4 +29,5 @@
     <string name="on">On</string>
     <string name="off">Off</string>
     <string name="start_progress">Start Progress</string>
+    <string name="enter_example_thread">enter_example_thread</string>
 </resources>

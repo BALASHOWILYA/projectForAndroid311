@@ -2,6 +2,7 @@ package com.example.projectforandroid311;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.HandlerThread;
 import android.os.PersistableBundle;
 import android.util.Log;
 import android.widget.Button;
@@ -24,10 +25,16 @@ public class MainActivity extends AppCompatActivity {
 
     private Button enterExampleRadioButton;
     private Button enterExampleToggleButton;
+    private Button enterExampleThread;
 
     private Button enterExampleProgressBar;
 
+    private Button enterPriorityThreadExample;
 
+    private Button enterMethodsWaitingNotifies;
+    private Button enterExampleAsyncTask;
+
+    private Button enterExampleHandlerThread;
     private String userEmailTextForSave;
     private String userPasswordTextForSave;
 
@@ -39,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
         enterExampleRadioButton = findViewById(R.id.enter_example_radio_button_id);
         enterExampleToggleButton = findViewById(R.id.enter_example_toggle_button);
         enterExampleProgressBar = findViewById(R.id.enter_example_for_progress_bar_id);
-
+        enterExampleThread = findViewById(R.id.enter_example_thread_id);
+        enterPriorityThreadExample = findViewById(R.id.enter_priority_thread_example_id);
+        enterMethodsWaitingNotifies = findViewById(R.id.enter_methodsWaitingNotifies);
+        enterExampleAsyncTask = findViewById(R.id.enter_example_asyncTask_id);
+        enterExampleHandlerThread = findViewById(R.id.enter_example_handler_thread_id);
     }
 
     @Override
@@ -84,6 +95,37 @@ public class MainActivity extends AppCompatActivity {
             Intent secondIntent = new Intent(MainActivity.this, ExampleForProgressBar.class);
             startActivity(secondIntent);
         });
+
+        enterExampleThread.setOnClickListener((view) ->{
+            Intent secondIntent = new Intent(MainActivity.this, ExampleThreads.class);
+            startActivity(secondIntent);
+        });
+
+        enterPriorityThreadExample.setOnClickListener((view) ->{
+            Intent secondIntent = new Intent(MainActivity.this, ExampleThreadPriority.class);
+            startActivity(secondIntent);
+        });
+
+        enterMethodsWaitingNotifies.setOnClickListener((view)->
+        {
+            Intent secondIntent = new Intent(MainActivity.this, ExampleMethoedsWaitNotifies.class);
+            startActivity(secondIntent);
+        });
+
+        enterExampleAsyncTask.setOnClickListener((view)->
+        {
+            Intent secondIntent = new Intent(MainActivity.this, ExampleAsyncTask.class);
+            startActivity(secondIntent);
+        });
+
+        enterExampleHandlerThread.setOnClickListener((view)->{
+            Intent secondIntent = new Intent(MainActivity.this, ExampleHandlerThread.class);
+            startActivity(secondIntent);
+        });
+
+
+
+
 
         enterAccountButton.setOnClickListener((view) ->{
             Log.d("checkButtonLog", "enterAccountBtn");
