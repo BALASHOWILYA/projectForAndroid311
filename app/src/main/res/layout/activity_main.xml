@@ -98,5 +98,12 @@
         android:layout_height="wrap_content"
         android:text="enter_example_handler_thread"/>
 
+    <Button
+        android:id="@+id/enter_example_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enter example list view"/>
+
+
 
 </LinearLayout>

@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
     private String userEmailTextForSave;
     private String userPasswordTextForSave;
 
+    private Button enterExampleListView;
+
     private void init(){
         userEmailEditText = findViewById(R.id.email_edit_text_id);
         userPasswordEditText = findViewById(R.id.password_edit_text_id);
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         enterMethodsWaitingNotifies = findViewById(R.id.enter_methodsWaitingNotifies);
         enterExampleAsyncTask = findViewById(R.id.enter_example_asyncTask_id);
         enterExampleHandlerThread = findViewById(R.id.enter_example_handler_thread_id);
+        enterExampleListView = findViewById(R.id.enter_example_list_view);
+
     }
 
     @Override
@@ -120,6 +124,11 @@ public class MainActivity extends AppCompatActivity {
 
         enterExampleHandlerThread.setOnClickListener((view)->{
             Intent secondIntent = new Intent(MainActivity.this, ExampleHandlerThread.class);
+            startActivity(secondIntent);
+        });
+
+        enterExampleListView.setOnClickListener((view)->{
+            Intent secondIntent = new Intent(MainActivity.this, ExampleListView.class);
             startActivity(secondIntent);
         });
 
