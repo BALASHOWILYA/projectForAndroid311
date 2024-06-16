@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:name=".ApplicationClass"
@@ -60,6 +61,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name =".ApplicationClass$NotificationBroadcast"
+            android:allowBackup = "true"
+            android:directBootAware = "true"
+            android:enabled = "true"
+            android:exported = "false">
+        </receiver>
+
     </application>
+
+
+
 
 </manifest>

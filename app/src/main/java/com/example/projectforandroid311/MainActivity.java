@@ -5,13 +5,18 @@ import android.os.Bundle;
 import android.os.HandlerThread;
 import android.os.PersistableBundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -39,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
     private String userPasswordTextForSave;
 
     private Button enterExampleListView;
+    private Button sendNotificationButton;
+
 
     private void init(){
         userEmailEditText = findViewById(R.id.email_edit_text_id);
@@ -54,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
         enterExampleAsyncTask = findViewById(R.id.enter_example_asyncTask_id);
         enterExampleHandlerThread = findViewById(R.id.enter_example_handler_thread_id);
         enterExampleListView = findViewById(R.id.enter_example_list_view);
+        sendNotificationButton = findViewById(R.id.send_notification_button_id);
+
 
     }
 
@@ -65,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
         long time =  System.currentTimeMillis();
         Log.d("LifeCycleLog", "onCreate: " + time);
         init();
+        Toolbar toolBar = findViewById(R.id.tool_bar_for_main_activity_id);
+        setSupportActionBar(toolBar);
+
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -136,6 +149,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
         enterAccountButton.setOnClickListener((view) ->{
             Log.d("checkButtonLog", "enterAccountBtn");
             Intent intent = new Intent(MainActivity.this, CalculatorActivity.class );
@@ -182,6 +198,33 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = new MenuInflater(this);
+        menuInflater.inflate(R.menu.options_menu, menu );
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int itemId = item.getItemId();
+        if(itemId == R.id.menu_profile_id){
+            Toast.makeText(this, "menu_profile_id", Toast.LENGTH_LONG).show();
+        }
+        if(itemId == R.id.menu_exit_id){
+            Toast.makeText(this, "menu_exit_id", Toast.LENGTH_LONG).show();
+        }
+        if(itemId == R.id.menu_settings_id){
+            Toast.makeText(this, "menu_settings_id", Toast.LENGTH_LONG).show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+
+
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {

@@ -8,6 +8,13 @@
     android:orientation="vertical"
     tools:context=".CalculatorActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="#16ADE8"
+        app:titleTextColor="@android:color/black" />
 
     <include layout="@layout/horizontal_views_for_profile"/>
     <include layout="@layout/calculator_grid_layout"/>
@@ -19,5 +26,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/send_notification_btn_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:text="add"/>
 
 </LinearLayout>

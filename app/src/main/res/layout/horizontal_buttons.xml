@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <Button
+        android:id="@+id/enter_example_handler_thread_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enter_example_handler_thread"/>
+
+    <Button
+        android:id="@+id/enter_example_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="enter example list view"/>
+
+    <Button
+        android:id="@+id/send_notification_button_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Notification"/>
+
+</LinearLayout>
