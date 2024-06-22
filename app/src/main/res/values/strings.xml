@@ -51,9 +51,8 @@
     </string-array>
 
 
-
     <integer-array name="age">
-        <item> 25 </item>
-        <item> 48 </item>
+        <item>25</item>
+        <item>48</item>
     </integer-array>
 </resources>

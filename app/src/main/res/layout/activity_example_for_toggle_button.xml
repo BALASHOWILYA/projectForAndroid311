@@ -8,7 +8,28 @@
     android:orientation="vertical"
     tools:context=".ExampleForToggleButton">
 
+    <Button
+        android:id="@+id/show_text_file_from_apk_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="button"/>
+
+    <Button
+        android:id="@+id/show_text_file_from_internalStorage_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="second button"/>
+
+
+    <Button
+        android:id="@+id/show_text_file_from_sharedpreferences_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="second button"/>
+
     <include layout="@layout/example_for_toggle_button"/>
+
+
 
 
 </LinearLayout>

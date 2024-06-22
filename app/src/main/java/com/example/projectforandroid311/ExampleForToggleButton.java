@@ -1,7 +1,9 @@
 package com.example.projectforandroid311;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -16,12 +18,17 @@ import androidx.core.view.WindowInsetsCompat;
 public class ExampleForToggleButton extends AppCompatActivity {
 
     private ToggleButton toggleButton;
+    private Button button, internalStorage, sharedPreferencesButton;
     private TextView text;
     private String textForSaving;
 
     private void init(){
         toggleButton = findViewById(R.id.toggle_button_id);
         text = findViewById(R.id.show_text_view_id);
+        button = findViewById(R.id.show_text_file_from_apk_button);
+        internalStorage = findViewById(R.id.show_text_file_from_internalStorage_button);
+        sharedPreferencesButton = findViewById(R.id.show_text_file_from_sharedpreferences_button);
+
     }
 
 
@@ -56,6 +63,24 @@ public class ExampleForToggleButton extends AppCompatActivity {
 
             }
         });
+
+        button.setOnClickListener((v ->
+        {
+            Intent intent = new Intent(this, ExampleForApkFile.class);
+            startActivity(intent);
+        }));
+
+        internalStorage.setOnClickListener(v->{
+
+            Intent intent = new Intent(this, InternalStorageActivity.class);
+            startActivity(intent);
+        });
+        sharedPreferencesButton.setOnClickListener(v ->{
+            Intent intent = new Intent(this, ExampleForSharedPreferences.class);
+            startActivity(intent);
+
+        });
+
     }
 
     @Override
